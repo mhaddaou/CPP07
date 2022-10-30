@@ -6,7 +6,7 @@
 /*   By: mhaddaou < mhaddaou@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 05:34:12 by mhaddaou          #+#    #+#             */
-/*   Updated: 2022/10/30 15:32:47 by mhaddaou         ###   ########.fr       */
+/*   Updated: 2022/10/30 16:29:05 by mhaddaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ class Array{
         Array &operator[](const Array& other){
             return (arr[n]);
         }
-        bool &operator(const Array& other){
+        bool &operatorl(const Array& other){
         
         int size(){
             return (sizeof(array));
