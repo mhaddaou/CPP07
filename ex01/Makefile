@@ -5,16 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mhaddaou < mhaddaou@student.1337.ma>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/30 00:43:34 by mhaddaou          #+#    #+#              #
-#    Updated: 2022/10/30 01:59:56 by mhaddaou         ###   ########.fr        #
+#    Created: 2022/10/30 05:00:22 by mhaddaou          #+#    #+#              #
+#    Updated: 2022/10/30 05:02:33 by mhaddaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = template
+
+
+NAME = iter
 FLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = main.cpp
-HEADER = whatever.hpp
 CC = c++
+HEADER = iter.hpp
 RM = rm -rf
 
 
@@ -26,11 +28,11 @@ OBJ = $(SRC:%.cpp=%.o)
 all: ${NAME}
 
 ${NAME} : ${OBJ} ${HEADER}
-	${CC} ${FLAGS} ${OBJ} -o ${NAME}
+	${CC} ${FLAGS} ${OBJ} -o ${NAME}  
 
 clean:
 	${RM} ${OBJ}
-
+	
 fclean: clean
 	${RM} ${NAME}
 

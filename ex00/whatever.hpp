@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   whatever.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mhaddaou <mhaddaou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mhaddaou < mhaddaou@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 00:44:19 by mhaddaou          #+#    #+#             */
-/*   Updated: 2022/10/30 05:16:11 by mhaddaou         ###   ########.fr       */
+/*   Updated: 2022/10/30 02:00:22 by mhaddaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,27 @@
 #include <string>
 #include <iostream>
 
-template<class T>
-void swapN(T content1, T content2){
+template<typename T>
+
+void swap(T &content1, T &content2){
     T tmp = content1;
     content1 = content2;
     content2 = tmp;
+}
+
+template<typename N>
+
+N   max(const N content1,const N content2){
+   if (content2 >= content1) return content2;
+   else return content1;
+}
+
+template< typename U >
+
+U min(const U content1 ,const U content2)
+{
+    if (content1 >= content2) return (content2);
+    else return (content2);
 }
 
 

@@ -1,0 +1,9 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/psychom/Desktop/CPP07/ex00",
+            "binaryPath": "/home/psychom/Desktop/CPP07/ex00/template",
+            "binaryArgs": []
+        }
+    ]
+}
