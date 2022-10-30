@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mhaddaou < mhaddaou@student.1337.ma>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/30 05:00:22 by mhaddaou          #+#    #+#              #
-#    Updated: 2022/10/30 05:33:07 by mhaddaou         ###   ########.fr        #
+#    Created: 2022/10/30 05:33:31 by mhaddaou          #+#    #+#              #
+#    Updated: 2022/10/30 05:33:51 by mhaddaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = iter
+NAME = arry
 FLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = main.cpp
 CC = c++
-HEADER = iter.hpp
+HEADER = Array.hpp
 RM = rm -rf
 
 
