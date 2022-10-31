@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mhaddaou < mhaddaou@student.1337.ma>       +#+  +:+       +#+        */
+/*   By: mhaddaou <mhaddaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 05:34:12 by mhaddaou          #+#    #+#             */
-/*   Updated: 2022/10/30 16:29:05 by mhaddaou         ###   ########.fr       */
+/*   Updated: 2022/10/31 01:42:12 by mhaddaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,26 +24,33 @@ class Array{
         unsigned int _size;
     public:
         Array():_size(0){
-            array = new T[_size];
-        }
+            array = new T[0];
+        };
         Array(unsigned int n):_size(n){
             array = new T[_size];
-        }
+        };
         Array (const Array&  other){
             *this  = other;
-        }
-        Array &operator=(const Array& other){
-            array = other.array;
+        };
+        Array &operator=(const Array &other){
             _size = other._size;
-        }
-        Array &operator[](const Array& other){
-            return (arr[n]);
-        }
-        bool &operatorl(const Array& other){
-        
-        int size(){
-            return (sizeof(array));
-        }
+            array = new T[_size];
+            array = other.array;
+            return (*this);
+        };
+        T &operator[](unsigned int i)
+        {
+            if (i < 0 || i >= _size)
+                throw std::exception();
+            return (array[i]);
+        };
+        int size() const{
+            return (_size);
+        };
+        ~Array(){
+            if (_size > 0)
+                delete [] array;
+        };
 };
 
 #endif

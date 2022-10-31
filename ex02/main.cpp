@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mhaddaou < mhaddaou@student.1337.ma>       +#+  +:+       +#+        */
+/*   By: mhaddaou <mhaddaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 05:34:42 by mhaddaou          #+#    #+#             */
-/*   Updated: 2022/10/30 05:38:58 by mhaddaou         ###   ########.fr       */
+/*   Updated: 2022/10/31 01:14:20 by mhaddaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 int main(int, char**)
 {
     Array<int> numbers(MAX_VAL);
+    // std::cout << numbers.size();
     int* mirror = new int[MAX_VAL];
     srand(time(NULL));
     for (int i = 0; i < MAX_VAL; i++)
@@ -60,5 +61,6 @@ int main(int, char**)
         numbers[i] = rand();
     }
     delete [] mirror;//
+    // delete [] numbers;
     return 0;
 }
