@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mhaddaou <mhaddaou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mhaddaou < mhaddaou@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 05:34:12 by mhaddaou          #+#    #+#             */
-/*   Updated: 2022/10/31 01:42:12 by mhaddaou         ###   ########.fr       */
+/*   Updated: 2022/10/30 21:00:02 by mhaddaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,20 @@ class Array{
         Array (const Array&  other){
             *this  = other;
         };
-        Array &operator=(const Array &other){
-            _size = other._size;
-            array = new T[_size];
-            array = other.array;
+        Array & operator = ( const Array & other )
+        {
+            if (this == &other)
+                return (*this);
+            this->_size = other._size;
+            this->array = new T[this->_size];
+            for (size_t i = 0; i < this->_size; i++)
+                this->array[i] = other.array[i];
             return (*this);
         };
+
         T &operator[](unsigned int i)
         {
-            if (i < 0 || i >= _size)
+            if (i >= _size)
                 throw std::exception();
             return (array[i]);
         };
